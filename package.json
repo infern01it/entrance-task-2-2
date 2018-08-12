@@ -9,7 +9,7 @@
   "author": "Max Shevkoplias",
   "license": "ISC",
   "dependencies": {
-    "snippets": "git+ssh://git@github.com/infernotiv/snippets.git"
+    "sass-snippets": "^1.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",

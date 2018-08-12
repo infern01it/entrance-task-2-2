@@ -8,7 +8,7 @@ var path           = require('path'),
 		svgmin         = require('gulp-svgmin'),
 		sass           = require('gulp-sass'),
 		cssbeautify    = require('gulp-cssbeautify'),
-		snippets       = require('snippets');
+		snippets       = require('sass-snippets');
 
 gulp.task('browser-sync', function() {
 	browserSync({ server: true, notify: false });
