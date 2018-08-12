@@ -1,0 +1,28 @@
+/* Блок избранных сценариев */
+.fav-scripts
+	padding-left: 13px
+
++media(sm)
+	.fav-scripts
+		padding: 0
+	
+/* Слайдер избранных сценариев */
+.favorites-scripts-slider
+	&__item
+		float: left
+		display: flex !important
+		margin-bottom: 15px
+		&:nth-child(2)
+			justify-content: center
+		&:nth-child(3)
+			justify-content: flex-end
+
++media(sm)
+	.favorites-scripts-slider
+		&__item
+			margin-bottom: 0
+			margin-right: 15px
+			&:nth-child(2)
+				justify-content: flex-start
+			&:nth-child(3)
+				justify-content: flex-start

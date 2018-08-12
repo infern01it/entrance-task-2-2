@@ -1,0 +1,159 @@
+/* Блок "Главное" */
+.main
+	padding-right: 13px
+
++media(sm)
+	.main
+		padding: 0
+
+/* Основной информационный блок */
+.card-info
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+	height: 331px
+	border-radius: 20px
+	background-image: url(#{$url-img}/bg@1x.png)
+	background-size: cover
+	background-position: 50% 50%
+	overflow: hidden
+	&__left,
+	&__right
+		height: 100%
+	&__left
+		+b4col(#{calc(100% - #{$mainCardWidth + 20px})})
+		padding: 26px 25px 0
+	&__right
+		+b4col($mainCardWidth + 20px)
+		padding: 20px 20px 0 0
+	&__title
+		font-size: 27px
+		font-weight: 700
+		line-height: 31px
+		color: $dark
+		margin-bottom: 6px
+	&__desc
+		font-size: 14px
+		font-weight: 400
+		line-height: 16px
+		color: $dark
+		margin-bottom: 25px
+	&__weather
+		display: flex
+	&__devices
+		height: 100%
+
++media(xs)
+	.card-info
+		height: auto
+		&__left,
+		&__right
+			height: auto
+			+b4col(100%)
+		&__left
+			padding: 20px
+		&__right
+			padding: 0
+			padding-bottom: 20px
+		&__title
+			font-size: 18px
+			line-height: 21px
+			margin-bottom: 5px
+		&__desc
+			font-size: 12px
+			line-height: 14px
+			margin-bottom: 15px
+
+/* Блок с погодой */
+.weather
+	&__temperature
+		&_mr
+			&_18
+				margin-right: 18px
+			&_5
+				margin-right: 5px
+	&__icon
+		margin-top: 27px
+
++media(xs)
+	.weather
+		&__icon
+			margin-top: 19px
+		
+/* Блок с темпетарурой */
+.temperature
+	&__title
+		font-size: 14px
+		font-weight: 400
+		line-height: 16px	
+		color: $gray
+		margin-bottom: 4px
+	&__body
+		font-size: 36px
+		font-weight: 700
+		line-height: 42px
+		color: $dark
+
++media(xs)
+	.temperature
+		&__title
+			font-size: 12px
+			line-height: 14px
+			margin-bottom: 5px
+		&__body
+			font-size: 24px
+			line-height: 28px
+
+/* Слайдер устройств из инфо блока */
+.info-devices-slider
+	$p: &
+	position: relative
+	&__items
+		height: 100%
+		.slick-list
+			height: 100% !important
+	&__item
+		margin-bottom: 15px
+		cursor: pointer
+	&__arrow
+		position: absolute
+		z-index: 1
+		bottom: 0
+		left: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		width: $mainCardWidth
+		height: 41px
+		padding: 0
+		background-color: transparent
+		border: none
+		outline: none !important
+		cursor: pointer
+		&:not(#{$p}__arrow_hidden)
+			+trs(.25s)
+		&_hidden
+			opacity: 0
+			transform: translateY(3px)
+
+.info-devices-slider__items
+	.sm-card
+		$p: &
+		&__icon,
+		&__title,
+		&__desc
+			+trs(.25s)
+	.slick-slide:not(.slick-active)
+		.sm-card
+			&__icon,
+			&__title,
+			&__desc
+				opacity: 0
+
++media(xs)
+	.info-devices-slider
+		&__item
+			margin-bottom: 0
+			margin-left: 20px
+		&__arrow
+			display: none

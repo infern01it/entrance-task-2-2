@@ -1,0 +1,186 @@
+/* Основной блок с контентом на странице */
+.page
+	position: relative
+	width: map-get($max-widths, 'lg')
+	margin: 0 auto
+	&__header
+	&__footer
+	&__body
+		width: 100%
+		min-height: calc(100vh - #{$headerHeightLg + $footerHeight})
+		padding-left: $pagePaddingLg
+		padding-right: $pagePaddingLg
+		+clearfix
+	&__main
+		float: left
+		width: 50%
+	&__favorites-scripts
+		float: left
+		width: 50%
+	&__favorites-devices
+		float: left
+		width: 100%
+
++media(md)
+	.page
+		width: map-get($max-widths, 'md')
+
++media(sm)
+	.page
+		width: map-get($max-widths, 'sm')
+		&__main,
+		&__favorites-scripts
+			width: 100%
+
++media(xs)
+	.page
+		padding-top: $headerHeightXs
+		width: map-get($max-widths, 'xs')
+		&__body
+			padding-left: $pagePaddingXs
+			padding-right: $pagePaddingXs
+
+/* Каточки основных блоков */
+.lg-card
+	width: 100%
+	&__head
+		display: flex
+		align-items: center
+		padding-top: 30px // Тут отступ был то 29, то 30, то 31 - сделал 30
+		padding-bottom: 20px
+	&__title
+		margin: 0
+		margin-right: 13px
+	&__buttons
+		margin-left: auto
+
++media(sm)
+	.lg-card
+		&__buttons
+			display: none !important
+		&__sort
+			margin-left: auto
+
++media(xs)
+	.lg-card
+		&__body
+			&_long
+				width: calc(100% + #{$pagePaddingXs})
+	
+/* Блок со стрелками слайдера */
+.slider-arrow
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	&__prev,
+	&__next
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 18px
+		height: 18px
+		background-color: transparent
+		border: none
+		outline: none !important
+		padding: 0
+		cursor: pointer
+		+trs(.3s)
+		&_disabled
+			opacity: .3
+	&__prev
+		margin-right: 10px
+	&__next
+		img
+			transform-origin: center
+			transform: rotate(-180deg)
+
+/* Блок с фильтрацией слайдера */
+.slider-sort
+	&__btn-xs
+		display: none
+	&__list
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		padding: 0
+		margin: 0
+		list-style: none
+	&__item
+		padding: 0
+		&:not(:last-child)
+			margin-right: 10px
+	&__filter-btn
+		display: block
+
++media(sm)
+	.slider-sort
+		$p: &
+		position: relative
+		&_open
+			#{$p}
+				&__list
+					display: block
+				&__btn-xs
+					border-bottom-left-radius: 0
+					border-bottom-right-radius: 0
+					img
+						transform: rotate(-180deg)
+		&__btn-xs
+			display: flex
+			justify-content: center
+			align-items: center
+			background-color: $accent
+			+trs(0s)
+			img
+				width: 12px
+				height: 12px
+				margin-left: 8px
+		&__list
+			display: none
+			position: absolute
+			z-index: 10
+			top: 30px
+			right: 0
+			width: 120px
+			min-width: calc(100% + 20px)
+			background-color: red
+			border-radius: 20px
+			border-top-right-radius: 0
+			overflow: hidden
+			border: 1px solid $accent
+		&__item
+			&:not(:last-child)
+				margin-right: 0
+		&__filter-btn
+			border-radius: 0
+			width: 100%
+			text-align: right
+
+/* Блок из слайдеров */
+.sm-card
+	position: relative
+	width: $mainCardWidth !important
+	background-color: $card
+	padding: 52px 14px 14px
+	border-radius: 20px
+	display: flex !important
+	flex-direction: column
+	justify-content: flex-end
+	cursor: pointer
+	+trs(.25s)
+	&__icon
+		position: absolute
+		top: 14px
+		left: 14px
+	&__title
+		margin-bottom: 3px
+		&:last-child
+			margin-bottom: 0
+	&_height
+		&_100
+			height: 100px !important
+		&_120
+			height: 120px !important
+	&:hover
+		background-color: #ffffff
+		box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50)

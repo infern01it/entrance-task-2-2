@@ -1,0 +1,74 @@
+html,
+body
+	overflow-x: hidden
+
+body
+	min-width: 320px
+	position: relative
+	font-family: "Arial", sans-serif
+	font-size: 18px
+	line-height: 24px
+	font-weight: 400
+
+section
+	position: relative
+
+srtong, b
+	font-weight: 700
+
+em, i
+	font-style: italic
+
+.h2
+	font-size: 18px
+	font-weight: 700
+	line-height: 21px
+	color: $dark
+
+.h3
+	font-size: 14px
+	font-weight: 700
+	line-height: 16px
+	color: $dark
+
+/* Чтоб у баганутых иконок фон был прозрачный */
+svg
+	rect[width="1366"][height="768"]
+		fill: transparent !important
+
+/* Кнопки разных переключателей */
+.toggle-buttons
+	padding: 0 15px
+	height: 30px
+	font-size: 13px
+	line-height: 15px
+	background-color: $card
+	border: 1px solid transparent
+	outline: none !important
+	border-radius: 20px
+	cursor: pointer
+	white-space: nowrap
+	+trs(.25s)
+	&.active
+		background-color: $accent
+	&:hover
+		background-color: $accentHover
+
+/* Кнопки из модального окна */
+.popup-btn
+	border: none
+	outline: none !important
+	padding: 0
+	background-color: #ffffff
+	height: 60px
+	border-radius: 20px
+	font-size: 18px
+	line-height: 21px
+	color: #000000
+	letter-spacing: 0
+	cursor: pointer
+	+trs(.25s)
+	&_color_accent
+		background-color: $accent
+	&:hover
+		background-color: $accentHover

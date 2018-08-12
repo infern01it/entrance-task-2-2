@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Главная</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=devices-width, initial-scale=1, maximum-scale=1">
+
+<!--	<meta name="google-site-verification" content="" />-->
+<!--	<meta name="yandex-verification" content="" />-->
+	
+	<meta property="og:image" content="path/to/image.jpg">
+	
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/png">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Цвет мобильного браузера -->
+<!--	<meta name="theme-color" content="#000">-->
+<!--	<meta name="msapplication-navbutton-color" content="#000">-->
+<!--	<meta name="apple-mobile-web-app-status-bar-style" content="#000">-->
+	
+	<link rel="stylesheet" href="css/reboot.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/roundslider.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+
+<body>
+	
+	<main class="page">
+		<header class="page__header header">
+			<a href="#" class="header__logo ya-logo">
+				<img src="/img/YaLogo.svg">
+			</a>
+			<div class="header__btn-menu-xs">
+				<button class="btn-menu-xs">
+					<img src="/img/icon_list_m.png" class="btn-menu-xs__img">
+				</button>
+			</div>
+			<nav class="header__menu header-menu">
+				<a href="#" class="header-menu__link header-menu__link_active">Сводка</a>
+				<a href="#" class="header-menu__link">Устройства</a>
+				<a href="#" class="header-menu__link">Сценарии</a>
+			</nav>
+		</header>
+		
+		<div class="page__body">
+			<section class="page__main main">
+				<div class="lg-card">
+					<div class="lg-card__head">
+						<h2 class="lg-card__title h2">Главное</h2>
+					</div>
+					<div class="lg-card__body">
+						<div class="card-info">
+							<div class="card-info__left">
+								<h2 class="card-info__title">Привет, Геннадий!</h2>
+								<div class="card-info__desc">Двери и окна закрыты, сигнализация включена.</div>
+								<div class="card-info__weather weather">
+									<div class="weather__temperature weather__temperature_mr_18 temperature">
+										<div class="temperature__title">
+											<span>Дома</span>
+										</div>
+										<div class="temperature__body">
+											<span>+23</span>
+										</div>
+									</div>
+									<div class="weather__temperature weather__temperature_mr_5 temperature">
+										<div class="temperature__title">
+											<span>За окном</span>
+										</div>
+										<div class="temperature__body">
+											<span>+18</span>
+										</div>
+									</div>
+									<div class="weather__icon">
+										<img src="/img/cloud-drizzle.svg" class="img-svg">
+									</div>
+								</div>
+							</div>
+							<div class="card-info__right">
+								<div class="card-info__devices info-devices-slider">
+									<div class="info-devices-slider__items">
+										<div class="info-devices-slider__item sm-card sm-card_height_120">
+											<img src="/img/icon_temperature.svg" class="img-svg sm-card__icon">
+											<h3 class="sm-card__title h3">Philips Cooler</h3>
+											<div class="sm-card__desc small-text">Начнет охлаждать в 16:30</div>
+										</div>
+										<div class="info-devices-slider__item sm-card sm-card_height_120">
+											<img src="/img/icon_sun.svg" class="img-svg sm-card__icon">
+											<h3 class="sm-card__title h3">Xiaomi Yeelight LED Smart Bulb</h3>
+											<div class="sm-card__desc small-text">Включится в 17:00</div>
+										</div>
+										<div class="info-devices-slider__item sm-card sm-card_height_120">
+											<img src="/img/icon_temperature.svg" class="img-svg sm-card__icon">
+											<h3 class="sm-card__title h3">Philips Cooler</h3>
+											<div class="sm-card__desc small-text">Начнет охлаждать в 16:30</div>
+										</div>
+										<div class="info-devices-slider__item sm-card sm-card_height_120">
+											<img src="/img/icon_sun.svg" class="img-svg sm-card__icon">
+											<h3 class="sm-card__title h3">Xiaomi Yeelight LED Smart Bulb</h3>
+											<div class="sm-card__desc small-text">Включится в 17:00</div>
+										</div>
+										<div class="info-devices-slider__item sm-card sm-card_height_120">
+											<img src="/img/icon_temperature.svg" class="img-svg sm-card__icon">
+											<h3 class="sm-card__title h3">Philips Cooler</h3>
+											<div class="sm-card__desc small-text">Начнет охлаждать в 16:30</div>
+										</div>
+										<div class="info-devices-slider__item sm-card sm-card_height_120">
+											<img src="/img/icon_sun.svg" class="img-svg sm-card__icon">
+											<h3 class="sm-card__title h3">Xiaomi Yeelight LED Smart Bulb</h3>
+											<div class="sm-card__desc small-text">Включится в 17:00</div>
+										</div>
+									</div>
+									<button class="info-devices-slider__arrow">
+										<img src="/img/ui-icons/arrow-double-top.svg" class="img-svg">
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__favorites-scripts fav-scripts">
+				<div class="lg-card lg-card">
+					<div class="lg-card__head">
+						<h2 class="lg-card__title h2">Избранные сценарии</h2>
+						<div class="lg-card__buttons slider-arrow">
+							<button class="favorites-scripts-slider__prev slider-arrow__prev">
+								<img src="/img/ui-icons/arrow-right.png">
+							</button>
+							<button class="favorites-scripts-slider__next slider-arrow__next">
+								<img src="/img/ui-icons/arrow-right.png">
+							</button>
+						</div>
+					</div>
+					<div class="lg-card__body lg-card__body_long">
+						<div class="favorites-scripts-slider">
+							<div class="favorites-scripts-slider__item">
+								<div class="sm-card sm-card_height_100">
+									<img src="/img/icon_sun_2.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">Выключить весь свет в доме и во дворе</h3>
+								</div>
+							</div>
+							<div class="favorites-scripts-slider__item">
+								<div class="sm-card sm-card_height_100">
+									<img src="/img/icon_scheduled.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">Я ухожу</h3>
+								</div>
+							</div>
+							<div class="favorites-scripts-slider__item js-tgl-popup-lamp">
+								<div class="sm-card sm-card_height_100">
+									<img src="/img/icon_sun_2.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">Включить свет в коридоре</h3>
+								</div>
+							</div>
+							<div class="favorites-scripts-slider__item js-tgl-popup-term">
+								<div class="sm-card sm-card_height_100">
+									<img src="/img/icon_temperature_2.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">Набрать горячую ванну</h3>
+									<div class="sm-card__desc small-text">Начнётся в 18:00</div>
+								</div>
+							</div>
+							<div class="favorites-scripts-slider__item js-tgl-popup-temp">
+								<div class="sm-card sm-card_height_100">
+									<img src="/img/icon_temperature_2.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">Сделать пол тёплым во всей квартире</h3>
+								</div>
+							</div>
+<!--
+							<div class="favorites-scripts-slider__item">
+								<div class="sm-card sm-card_height_100">
+									<img src="/img/icon_sun_2.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">Выключить весь свет в доме и во дворе</h3>
+								</div>
+							</div>
+							<div class="favorites-scripts-slider__item">
+								<div class="sm-card sm-card_height_100">
+									<img src="/img/icon_scheduled.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">Я ухожу</h3>
+								</div>
+							</div>
+							<div class="favorites-scripts-slider__item">
+								<div class="sm-card sm-card_height_100">
+									<img src="/img/icon_sun_2.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">Включить свет в коридоре</h3>
+								</div>
+							</div>
+							<div class="favorites-scripts-slider__item">
+								<div class="sm-card sm-card_height_100">
+									<img src="/img/icon_temperature_2.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">Набрать горячую ванну</h3>
+									<div class="sm-card__desc small-text">Начнётся в 18:00</div>
+								</div>
+							</div>
+							<div class="favorites-scripts-slider__item">
+								<div class="sm-card sm-card_height_100">
+									<img src="/img/icon_temperature_2.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">Сделать пол тёплым во всей квартире</h3>
+								</div>
+							</div>
+-->
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__favorites-devices fav-devices">
+				<div class="lg-card">
+					<div class="lg-card__head">
+						<h2 class="lg-card__title h2">Избранные устройства</h2>
+						<div class="lg-card__sort slider-sort display visible" data-slider="favorites-devices-slider">
+							<button class="slider-sort__btn-xs toggle-buttons active">
+								<span>Все</span>
+								<img src="/img/ui-icons/arrow-down.svg">
+							</button>
+							<ul class="slider-sort__list">
+								<li class="slider-sort__item">
+									<button data-filter="all" class="slider-sort__filter-btn toggle-buttons active">Все</button>
+								</li>
+								<li class="slider-sort__item">
+									<button data-filter="filter-1" class="slider-sort__filter-btn toggle-buttons">Кухня</button>
+								</li>
+								<li class="slider-sort__item">
+									<button data-filter="filter-2" class="slider-sort__filter-btn toggle-buttons">Зал</button>
+								</li>
+								<li class="slider-sort__item">
+									<button data-filter="filter-3" class="slider-sort__filter-btn toggle-buttons">Лампочки</button>
+								</li>
+								<li class="slider-sort__item">
+									<button data-filter="filter-4" class="slider-sort__filter-btn toggle-buttons">Камеры</button>
+								</li>
+							</ul>
+						</div>
+
+						<div class="lg-card__buttons slider-arrow">
+							<button class="favorites-devices-slider__prev slider-arrow__prev">
+								<img src="/img/ui-icons/arrow-right.png">
+							</button>
+							<button class="favorites-devices-slider__next slider-arrow__next">
+								<img src="/img/ui-icons/arrow-right.png">
+							</button>
+						</div>
+					</div>
+					<div class="lg-card__body lg-card__body_long">
+						<div class="favorites-devices-slider">
+							<div class="favorites-devices-slider__item filter-4">
+								<div class="sm-card sm-card_height_120">
+									<img src="/img/icon_sun_2.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">Xiaomi Yeelight LED Smart Bulb</h3>
+									<div class="sm-card__desc small-text">Включено</div>
+								</div>
+							</div>
+							<div class="favorites-devices-slider__item filter-1">
+								<div class="sm-card sm-card_height_120">
+									<img src="/img/icon_sun.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">D-Link Omna 180 Cam</h3>
+									<div class="sm-card__desc small-text">Включится в 17:00</div>
+								</div>
+							</div>
+							<div class="favorites-devices-slider__item filter-2">
+								<div class="sm-card sm-card_height_120">
+									<img src="/img/icon_temperature.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">Elgato Eve Degree Connected</h3>
+									<div class="sm-card__desc small-text">Выключено до 17:00</div>
+								</div>
+							</div>
+							<div class="favorites-devices-slider__item filter-3">
+								<div class="sm-card sm-card_height_120">
+									<img src="/img/icon_sun.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">LIFX Mini Day & Dusk A60 E27</h3>
+									<div class="sm-card__desc small-text">Включится в 17:00</div>
+								</div>
+							</div>
+							<div class="favorites-devices-slider__item filter-2">
+								<div class="sm-card sm-card_height_120">
+									<img src="/img/icon_sun_2.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">Xiaomi Mi Air Purifier 2S</h3>
+									<div class="sm-card__desc small-text">Включено</div>
+								</div>
+							</div>
+							<div class="favorites-devices-slider__item filter-4">
+								<div class="sm-card sm-card_height_120">
+									<img src="/img/icon_sun.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">Philips Zhirui</h3>
+									<div class="sm-card__desc small-text">Выключено</div>
+								</div>
+							</div>
+							<div class="favorites-devices-slider__item filter-1">
+								<div class="sm-card sm-card_height_120">
+									<img src="/img/icon_sun_2.svg" class="img-svg sm-card__icon">
+									<h3 class="sm-card__title h3">Xiaomi Mi Air Purifier 2S</h3>
+									<div class="sm-card__desc small-text">Включено</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+		<footer class="page__footer footer">
+			<nav class="footer__menu footer-menu small-text">
+				<a href="#" class="footer-menu__link">Помощь</a>
+				<a href="#" class="footer-menu__link">Обратная связь</a>
+				<a href="#" class="footer-menu__link">Разработчикам</a>
+				<a href="#" class="footer-menu__link">Условия использования</a>
+				<a href="#" class="footer-menu__link"></a>
+			</nav>
+			<div class="footer__corp ya-corp small-text">
+				<span>© 2001–2017  ООО «<a href="#">Яндекс</a>»</span>
+			</div>
+		</footer>
+	</main>
+
+	<div class="popup popup-lamp">
+		<div class="popup__bg js-tgl-popup-lamp"></div>
+		<div class="popup__wrap">
+			<div class="popup__body">
+				<h2 class="popup__title">Xiaomi Yeelight LED Smart Bulb</h2>
+				<div class="popup__desc">Включится в 17:00</div>
+
+				<div class="popup__right-info popup-right-info">
+					<img src="/img/icon_sun@2x.png" class="popup-right-info__icon">
+				</div>
+
+				<ul class="popup__buttons">
+					<li>
+						<button class="toggle-buttons active">Вручную</button>
+					</li>
+					<li>
+						<button class="toggle-buttons">Дневной свет</button>
+					</li>
+					<li>
+						<button class="toggle-buttons">Вечерний свет</button>
+					</li>
+					<li>
+						<button class="toggle-buttons">Рассвет</button>
+					</li>
+				</ul>
+
+				<div class="popup__range slider-range slider-range_vertical slider-range_lamp">
+					<img src="img/icon_sun_max.png" class="slider-range__max-icon">
+					<img src="img/icon_sun_min.png" class="slider-range__min-icon">
+					<div id="slider-lamp"></div>
+				</div>
+			</div>
+			<div class="popup__footer">
+				<button class="popup-btn popup-btn_color_accent popup__btn-ok">Применить</button>
+				<button class="popup-btn popup__btn-close js-tgl-popup-lamp">Закрыть</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup popup-temp">
+		<div class="popup__bg js-tgl-popup-temp"></div>
+		<div class="popup__wrap">
+			<div class="popup__body">
+				<h2 class="popup__title">Xiaomi Yeelight LED Smart Bulb</h2>
+				<div class="popup__desc">Включится в 17:00</div>
+
+				<div class="popup__right-info popup-right-info">
+					<div class="popup-right-info__temp">
+						<span>+18</span>
+						<img src="/img/icon_temperature_2@2x.png">
+					</div>
+				</div>
+
+				<ul class="popup__buttons">
+					<li>
+						<button class="toggle-buttons active">Вручную</button>
+					</li>
+					<li>
+						<button class="toggle-buttons">Холодно</button>
+					</li>
+					<li>
+						<button class="toggle-buttons">Тепло</button>
+					</li>
+					<li>
+						<button class="toggle-buttons">Жарко</button>
+					</li>
+				</ul>
+
+				<div class="popup__range slider-range slider-range_horizontal slider-range_temp">
+					<span class="slider-range__max-icon">+30</span>
+					<span class="slider-range__min-icon">-10</span>
+					<div id="slider-temp"></div>
+				</div>
+			</div>
+			<div class="popup__footer">
+				<button class="popup-btn popup-btn_color_accent popup__btn-ok">Применить</button>
+				<button class="popup-btn popup__btn-close js-tgl-popup-temp">Закрыть</button>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="popup popup-term">
+			<div class="popup__bg js-tgl-popup-term"></div>
+			<div class="popup__wrap">
+				<div class="popup__body">
+					<h2 class="popup__title">Xiaomi Yeelight LED Smart Bulb</h2>
+					<div class="popup__desc">Включится в 17:00</div>
+	
+					<div class="popup__right-info popup-right-info">
+						<div class="popup-right-info__temp">
+							<span>+18</span>
+							<img src="/img/icon_temperature_2@2x.png">
+						</div>
+					</div>
+
+					<div class="popup__round slider-round">
+							<div id="term-slider"></div>
+					</div>
+				</div>
+				<div class="popup__footer">
+					<button class="popup-btn popup-btn_color_accent popup__btn-ok">Применить</button>
+					<button class="popup-btn popup__btn-close js-tgl-popup-term">Закрыть</button>
+				</div>
+			</div>
+		</div>
+	
+</body>
+</html>

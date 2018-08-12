@@ -1,0 +1,351 @@
+.popup
+	$p: &
+	$timeAnim: .25s
+	position: fixed
+	z-index: 110
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	display: none
+	justify-content: center
+	align-items: center
+	&__bg
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: rgba(51,51,51,0.50)
+	&__wrap
+		position: relative
+		z-index: 1
+		width: 630px
+	&__body
+		background-color: #fff
+		border-radius: 20px
+		padding: 25px
+		opacity: 1
+		overflow: hidden
+	&__title
+		font-size: 27px
+		font-weight: 700
+		line-height: 31px
+		color: $dark
+		margin-bottom: 6px
+	&__desc
+		font-size: 14px
+		font-weight: 400
+		line-height: 16px
+		color: $dark
+		margin-bottom: 20px
+	&__right-info
+		position: absolute
+		top: 20px
+		right: 20px
+	&__buttons
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-wrap: wrap
+		margin: 0 0 25px
+		padding: 0
+		list-style: none
+		li
+			padding: 0
+			&:not(:last-child)
+				margin-right: 10px
+	&__footer
+		margin-top: 20px
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__btn-ok,
+	&__btn-close
+		+b4col(calc(50% - 10px))
+	&__bg,
+	&__title,
+	&__desc,
+	&__right-info,
+	&__buttons,
+	&__footer,
+	&__range,
+	&__round
+		opacity: 0
+		+trs($timeAnim)
+	&__footer
+		transform: translateY(-20px)
+	&__body
+		+trs($timeAnim)
+	&.display
+		display: flex
+	&.anim
+		#{$p}
+			&__bg
+				opacity: 1
+	&.visible
+		#{$p}
+			&__title,
+			&__desc,
+			&__right-info,
+			&__buttons,
+			&__footer,
+			&__range,
+			&__round
+				opacity: 1
+			&__footer
+				transform: translateY(0)
+
++media(xs)
+	.popup
+		$p: &
+		padding: $pagePaddingXs
+		overflow: auto
+		&.display
+			display: block
+		&.visible
+			#{$p}
+				&__body
+					height: 492px !important
+		&__wrap
+			width: 100%
+		&__body
+			padding: 20px 20px 25px
+		&__title
+			font-size: 18px
+			line-height: 21px
+			margin-bottom: 5px
+		&__desc
+			font-size: 12px
+			line-height: 14px
+			margin-bottom: 15px
+		&__right-info
+			display: none
+		&__buttons
+			flex-wrap: nowrap
+			overflow: auto
+			-ms-overflow-style: none
+			&::-webkit-scrollbar
+				height: 0px
+				width: 0px
+		&__round
+			margin-top: 103px
+		&__footer
+			margin-top: 15px
+			flex-wrap: wrap
+		&__btn-ok,
+		&__btn-close
+			+b4col(100%)
+		&__btn-close
+			margin-top: 15px
+
+.popup-right-info
+	&__icon
+		width: 48px
+		height: 48px
+	&__temp
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		span
+			display: block
+			font-size: 36px
+			font-weight: 700
+			line-height: 42px
+			color: #333
+		img, svg
+			width: 48px
+			height: 48px
+
+.slider-range
+	$p: &
+	position: relative
+	border-radius: 30px
+	&_vertical
+		margin: 0 auto
+		padding: 30px 0
+		width: 60px
+		height: 336px
+		#{$p}
+			&__min-icon
+				bottom: 12px
+			&__max-icon
+				top: 12px
+		&#{$p}
+			&_lamp
+				background-image: linear-gradient(-5deg, #FFE682 2%, #FF9E00 98%)
+			&_temp
+				background-image:  linear-gradient(0deg, #068FFF 2%, #FFD800 51%, #F76B1C 100%)
+	&_horizontal
+		padding: 0 30px
+		width: 100%
+		height: 60px
+		#{$p}
+			&__min-icon,
+			&__max-icon
+				top: 12px
+		&#{$p}
+			&_lamp
+				background-image: linear-gradient(85deg, #FFE682 2%, #FF9E00 98%)
+			&_temp
+				background-image:  linear-gradient(90deg, #068FFF 2%, #FFD800 51%, #F76B1C 100%)
+	&__min-icon,
+	&__max-icon
+		position: absolute
+		z-index: 1
+		width: 36px
+		height: 36px
+		font-size: 18px
+		line-height: 36px
+		color: #ffffff
+		text-align: center
+	&__min-icon
+		left: 12px
+	&__max-icon
+		right: 12px
+	.ui-slider
+		position: relative
+		z-index: 2
+		width: 100%
+		height: 100%
+		&.ui-slider-horizontal
+			.ui-slider-handle
+				margin-left: -30px
+		&.ui-slider-vertical
+			.ui-slider-handle
+				margin-bottom: -30px
+		.ui-slider-handle
+			position: absolute
+			z-index: 3
+			width: 60px
+			height: 60px
+			cursor: pointer
+			touch-action: none
+			background-color: transparent
+			border: 4px solid #FFFFFF
+			outline: none !important
+			box-shadow: inset 0 0 0 3px rgba(51,51,51,0.10)
+			border-radius: 50%
+
+.slider-round
+	$timeAnim: .25s
+	display: flex
+	justify-content: center
+	align-items: center
+	.rs-control
+		position: relative
+		outline: 0 none
+		.rs-container
+			position: relative
+			overflow: hidden
+			.rs-inner-container
+				position: relative
+				width: 100%
+				height: 100%
+				overflow: hidden
+				// background-image: url('#{$url-img}/Oval.png')
+				// background-position: 50% 50%
+				// background-size: cover
+				.rs-block
+					position: absolute
+					z-index: 3
+					top: 0
+					display: block
+					width: 100%
+					height: 100%
+					overflow: hidden
+					border-radius: 50%
+					.rs-path
+						position: absolute
+						z-index: 2
+						top: 0
+						display: block
+						width: 100%
+						height: 50%
+						background-clip: padding-box
+						transform-origin: 50% 100%
+						border-radius: 1000px 1000px 0 0
+						overflow: hidden
+						+trs($timeAnim)
+						&.rs-range-color
+							background-image: url('#{$url-img}/half_circle_1.svg')
+							background-size: cover
+						&.rs-path-color
+							background-image: url('#{$url-img}/half_circle_2.svg')
+							background-size: cover
+					.rs-block
+						.rs-inner
+							position: relative
+							z-index: 1
+							display: block
+							height: 100%
+							width: 100%
+							background-color: #ffffff
+							border-radius: 1000px
+							background: #FEFEFE
+							box-shadow: 0 2px 4px 0 rgba(134,121,71,0.45)
+						&::after
+							content: ''
+							display: block
+							width: 150px
+							height: 150px
+							background-color: #fff
+							position: absolute
+							bottom: -61px
+							left: 50%
+							margin-left: -75px
+							transform-origin: 50% 50%
+							transform: scaleX(-0.55) rotate(-45deg)
+			.rs-bar
+				position: absolute
+				z-index: 10
+				top: 50%
+				display: block
+				width: 50%
+				height: 0
+				transform-origin: 100% 50%
+				+trs($timeAnim)
+				&.rs-first
+					.rs-handle
+						cursor: move
+						&::before
+							content: ''
+							display: block
+							width: 12px
+							height: 8px
+							position: absolute
+							top: 50%
+							left: 17px
+							margin-top: -4px
+							transform: rotate(-90deg)
+							background-image: url('#{$url-img}/ui-icons/icon_arrow.svg')
+				&.rs-start
+					.rs-separator
+				&.rs-end
+					.rs-separator
+			.rs-overlay
+				position: absolute
+				z-index: 3
+				top: 0
+				width: 50%
+				height: 50%
+				background-color: #fff
+				transform-origin: 100% 100%
+				+trs($timeAnim)
+			.rs-tooltip
+				position: absolute
+				z-index: 10
+				top: 50%
+				left: 50%
+				width: 120px
+				height: 78px
+				margin-top: -40px !important
+				margin-left: -60px !important
+				cursor: default
+				border: 1px solid transparent
+				font-size: 66px
+				font-weight: 700
+				line-height: 76px
+				color: #333333
+				text-align: center
+		input
