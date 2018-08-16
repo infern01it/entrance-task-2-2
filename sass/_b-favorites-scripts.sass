@@ -17,6 +17,16 @@
 		&:nth-child(3)
 			justify-content: flex-end
 
++media(md)
+	.favorites-scripts-slider
+		$p: &
+		&__item
+			&:nth-child(2)
+				justify-content: flex-end
+		.slick-slide div:nth-child(3)
+			#{$p}__item
+				margin-bottom: 0
+
 +media(sm)
 	.favorites-scripts-slider
 		&__item

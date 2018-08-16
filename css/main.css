@@ -1496,6 +1496,19 @@ svg rect[width="1366"][height="768"] {
 	justify-content: flex-end;
 }
 
+@media (max-width: 1395.98px) {
+	.favorites-scripts-slider__item:nth-child(2) {
+		-webkit-box-pack: end;
+		-webkit-justify-content: flex-end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+	}
+
+	.favorites-scripts-slider .slick-slide div:nth-child(3) .favorites-scripts-slider__item {
+		margin-bottom: 0;
+	}
+}
+
 @media (max-width: 1023.98px) {
 	.favorites-scripts-slider__item {
 		margin-bottom: 0;
