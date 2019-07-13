@@ -775,13 +775,13 @@ svg rect[width="1366"][height="768"] {
 }
 
 .slider-round .rs-control .rs-container .rs-inner-container .rs-block .rs-path.rs-range-color {
-	background-image: url("/img/half_circle_1.svg");
+	background-image: url("../img/half_circle_1.svg");
 	-webkit-background-size: cover;
 	background-size: cover;
 }
 
 .slider-round .rs-control .rs-container .rs-inner-container .rs-block .rs-path.rs-path-color {
-	background-image: url("/img/half_circle_2.svg");
+	background-image: url("../img/half_circle_2.svg");
 	-webkit-background-size: cover;
 	background-size: cover;
 }
@@ -849,7 +849,7 @@ svg rect[width="1366"][height="768"] {
 	-webkit-transform: rotate(-90deg);
 	-ms-transform: rotate(-90deg);
 	transform: rotate(-90deg);
-	background-image: url("/img/ui-icons/icon_arrow.svg");
+	background-image: url("../img/ui-icons/icon_arrow.svg");
 }
 
 .slider-round .rs-control .rs-container .rs-overlay {
@@ -1242,7 +1242,7 @@ svg rect[width="1366"][height="768"] {
 	height: 331px;
 	-webkit-border-radius: 20px;
 	border-radius: 20px;
-	background-image: url(/img/bg@1x.png);
+	background-image: url("../img/bg@1x.png");
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: 50% 50%;
